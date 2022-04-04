@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Exercicio 2</title>
+  </head>
+  <body>
+    <div>
+      <h1>Formulario</h1>
+      <hr />
+      <input type="text" id="nome" placeholder="Informe o nome" />
+      <input type="text" id="sobrenome" placeholder="informe o seu sobrenome" />
+      <input type="number" id="idade" placeholder="informe a sua idade" />
+      <button onclick="Ola()">Mostrar mensagem</button>
+      <label id="nomeCompleto"></label>
+      <br>
+      <label id="idadeMostrar"></label>
+    </div>
+
+    <script>
+      function Ola() {
+        //DOM
+        var nome = document.getElementById("nome");
+        if (nome.value === "") {
+          document.getElementById("nomeCompleto").innerHTML = "informe nome";
+          nome.focus();
+          return;
+        }
+
+        var sobrenome = document.getElementById("sobrenome").value;
+
+        var nomeCompleto = document.getElementById("nomeCompleto").value;
+        console.log(nomeCompleto);
+
+        var idadeMostrar = document.getElementById("idadeMostrar");
+        console.log(idadeMostrar.value);
+
+        if (idade <= 18) {
+          idadeMostrar.innerHTML =
+            nome.value + " voce é menor de idade";
+        } else {
+          idadeMostrar.innerHTML =
+            nome.value + " voce é maior de idade";
+        }
+        
+        document.getElementById("nomeCompleto").innerHTML =
+          nome.value + " " + sobrenome;
+      }
+    </script>
+  </body>
+</html>

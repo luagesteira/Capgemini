@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .master {
+        background: gray;
+        display: flex;
+        width: 350px;
+        padding: 30px;
+     }
+      .unordered {
+        background: yellow;
+        padding: 30px;
+        width: 50%;
+        border: 5px solid red;
+        float: left;
+      }
+
+      .ordered {
+        padding: 30px;
+        background: aqua;
+        width: 50%;
+        border: 5px solid red;
+        float: left;
+      }
+
+      .frist {
+        list-style-type: circle;
+      }
+
+      .second {
+        list-style-type: lower-roman;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="master">
+      <div class="unordered">
+        <ul class="frist">
+          <li>Coffee</li>
+          <li>Tea</li>
+          <li>Milk</li>
+        </ul>
+
+        <ul>
+          <li>Coffee</li>
+          <li>Tea</li>
+          <li>Milk</li>
+        </ul>
+      </div>
+
+      <div class="ordered">
+        <ol>
+          <li>Coffee</li>
+          <li>Tea</li>
+          <li>Milk</li>
+        </ol>
+
+        <ol class="second">
+          <li>Coffee</li>
+          <li>Tea</li>
+          <li>Milk</li>
+        </ol>
+      </div>
+    </div>
+  </body>
+</html>
