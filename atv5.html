@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Exercício 5 - HTML Semântico - 05/04 -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 5 - HTML Semântico - 05/04</title>
+
+    <style>
+      .dropdown {
+        position: relative;
+        display: inline-block;
+        font-family: "Lucida Sans";
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #5f21d3;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.945);
+        padding: 12px 16px;
+        z-index: 100;
+      }
+      .dropdown:hover .dropdown-content {
+        display: flex;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a,
+      .dropbtn {
+        display: inline-block;
+        color: rgb(238, 235, 70);
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover,
+      .dropdown:hover .dropbtn {
+        background-color: red;
+      }
+
+      li.dropdownlist {
+        display: inline-block;
+      }
+
+      .dropdownlist-content {
+        display: none;
+        position: absolute;
+        background-color: #ff8ad8;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+
+      .dropdownlist-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .dropdownlist-content a:hover {
+        background-color: #15e927;
+      }
+
+      .dropdownlist:hover .dropdownlist-content {
+        display: block;
+      }
+
+      .droplist {
+        color: #34c1da;
+        text-decoration: none;
+        display: inline;
+        text-align: left;
+        background-color: black;
+      }
+
+      .dropselection{
+        color: #34c1da;
+        text-decoration: none;
+        display: inline;
+        text-align: left;
+      }
+
+      .dropselection option:hover {
+        background-color: #15e927;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">Consulta</a></li>
+        <li class="dropdownlist">
+          <a class="dropbtn">Cadastro</a>
+          <div class="dropdownlist-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <br />
+    <label class="droplist" for="animals">Escolha um Animal:</label>
+
+    <select class="dropselection" name="animals" id="animals">
+      <option value="gato">Gato</option>
+      <option value="cachorro">Cachorro</option>
+      <option value="papagaio">Papagaio</option>
+      <option value="jabuti">Jabuti</option>
+    </select>
+
+    <hr />
+
+    <div class="dropdown">
+      <p>Passa o mouse aqui, vai!</p>
+      <div class="dropdown-content">
+        <p>Me deve R$50!</p>
+      </div>
+    </div>
+  </body>
+</html>

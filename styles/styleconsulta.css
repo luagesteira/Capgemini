@@ -1,0 +1,11 @@
+thead{
+
+    background-color: palevioletred;
+    border: 2px;
+}
+
+thead:hover {
+    
+    background-color: coral;
+}
+
